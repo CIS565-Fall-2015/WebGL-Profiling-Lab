@@ -10,14 +10,8 @@ In this lab, we will use the following profiling and debugging tools to analyze 
 * [Firefox Shader Editor](https://hacks.mozilla.org/2013/11/live-editing-webgl-shaders-with-firefox-developer-tools/) or [Chrome Shader Editor Extension](https://github.com/spite/ShaderEditorExtension) - edit shaders
 * [Web Tracing Framework](http://google.github.io/tracing-framework/) - timeline of WebGL calls per frame
 * [Chrome Task Manager](http://www.googlechrometutorial.com/google-chrome-other-settings/Google-chrome-task-manager.html) - memory usage
-
-Each team will analyze any two of the following WebGL apps:
-
-### [Cesium](http://cesiumjs.org/Cesium/Build/Apps/CesiumViewer/index.html)
-
-[![](images/Cesium.png)](http://cesiumjs.org/Cesium/Build/Apps/CesiumViewer/index.html)
-
-
+* Engine specific tools like the Cesium Inspector or BabylonJS Debug layer.
+Each team will analyze any two of the WebGL apps below.
 
 Consider the following potential bottlenecks:
 
@@ -43,10 +37,63 @@ For each app you analyzed:
       * Optional: With ANGLE enabled/disabled (Windows only).  See [How to Enable Native OpenGL in your Browser](http://www.geeks3d.com/20130611/webgl-how-to-enable-native-opengl-in-your-browser-windows/) by JeGX.
       * Optional: When software rendering is used? (see below).
 
+## WebGL Apps and Engines
+
+### [Cesium](http://cesiumjs.org/Cesium/Apps/Sandcastle/index.html?src=3D)
+
+[![](images/Cesium.png)](http://cesiumjs.org/Cesium/Apps/Sandcastle/index.html?src=3D)
+
+### [Three.js](http://threejs.org/examples/)
+
+[![](images/Threejs.png)](http://threejs.org/examples/)
+
+### [BabylonJS](http://www.babylonjs-playground.com/)
+
+[![](images/BabylonJS.png)](http://www.babylonjs-playground.com/)
+
+### [SceneJS](http://scenejs.org/examples/)
+
+[![](images/SceneJS.png)](http://scenejs.org/examples/)
+
+### [PEX](http://vorg.github.io/pex/)
+
+[![](images/PEX.png)](http://vorg.github.io/pex/)
+
+### [SpiderGL](http://spidergl.org/code.php)
+
+[![](images/SpiderGL.png)](http://spidergl.org/code.php)
+
+### [Udacity Interactive 3D Graphics Demos](https://www.udacity.com/wiki/cs291/demos)
+
+[![](images/Udacity.png)](https://www.udacity.com/wiki/cs291/demos)
+
+### [BrainBrowser](https://brainbrowser.cbrain.mcgill.ca/#demos)
+
+[![](images/BrainBrowser.png)](https://brainbrowser.cbrain.mcgill.ca/#demos)
+
+### [Tangram](http://tangrams.github.io/tangram/)
+
+[![](images/Tangram.png)](http://tangrams.github.io/tangram/)
+
+### [MapBox GL JS](https://github.com/mapbox/mapbox-gl-js)
+
+[![](images/MapBoxGLJS.png)](https://github.com/mapbox/mapbox-gl-js)
+
+### [xeoEngine](http://xeoengine.org/examples/)
+
+[![](images/xeoEngine.png)](http://xeoengine.org/examples/)
+
+### [PhiloGL](http://www.senchalabs.org/philogl/demos.html)
+
+[![](images/PhiloGL.png)](http://www.senchalabs.org/philogl/demos.html)
+
+---
+
 **Software Rendering**
 
 To profile with software rendering, enable [swiftshader](http://transgaming.com/swiftshader) in Chrome.  Close all Chrome tabs and make sure there are no Chrome processes left running.  Then restart Chrome from the command line with `--blacklist-accelerated-compositing --blacklist-webgl` arguments.  Browse to `about:gpu` to see if it worked.  It will take a few minutes for Chrome to download swiftshader.  During this time, no WebGL support will be reported.
 
 ## Reading
 
-* [WebGL Debugging and Profiling Tools](http://www.realtimerendering.com/blog/webgl-debugging-and-profiling-tools/)
+* [WebGL Debugging and Profiling Tools](http://www.realtimerendering.com/blog/webgl-debugging-and-profiling-tools/) by Patrick Cozzi
+* [Graphics Pipeline Performance](http://http.developer.nvidia.com/GPUGems/gpugems_ch28.html) by Cem Cebenoyan
